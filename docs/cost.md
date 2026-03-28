@@ -1,19 +1,25 @@
-# Cost Optimization
+# Cost Optimization Plan
 
-## Quick Wins
+## Quick Wins (Week 1–2)
 - Remove idle resources → 5%
-- S3 lifecycle → 3%
-- Rightsizing → 8%
+- Enable S3 lifecycle → 3%
+- Rightsize EC2 → 8%
 
 ---
 
-## Medium
+## Medium Term
 - Savings Plans → 15%
-- Spot → 20%
+- Spot adoption → 20%
 
 ---
 
 ## Long Term
-- Reduce data transfer → 5%
+- Move workloads to Graviton → 10%
+- Reduce cross-region traffic → 5%
+
+---
+
+## Total Expected Savings
+≈ 30%
 
 - I was able to somewhat implement this within morningstar as well.. more can be discussed
