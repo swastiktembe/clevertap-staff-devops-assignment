@@ -35,7 +35,7 @@ This repository contains a production-grade design and partial implementation fo
 - Metrics: Prometheus (Amazon Managed Prometheus)
 - Logs: CloudWatch + OpenSearch
 - Traces: OpenTelemetry + X-Ray
-- Alerts: SLO-based (error budget burn rate)
+- Alerts: SLO-based 
 
 ---
 
@@ -62,4 +62,4 @@ This repository contains a production-grade design and partial implementation fo
 ## Assumptions
 - AWS Organizations in place
 - Separate accounts per environment
-- Kubernetes version 1.29
+- Kubernetes version XX
