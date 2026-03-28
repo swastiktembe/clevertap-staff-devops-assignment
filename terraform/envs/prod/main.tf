@@ -2,7 +2,6 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-# VPC Module
 module "vpc" {
   source = "../../modules/vpc"
 
@@ -15,15 +14,13 @@ module "vpc" {
   private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
   intra_subnets   = ["10.0.5.0/24", "10.0.6.0/24"]
 
-  s3_bucket_arn = "arn:aws:s3:::my-flowlogs-bucket"
+  s3_bucket_arn = "arn:aws:s3:::my-flowlogs"
 }
 
-# EKS Module
 module "eks" {
   source = "../../modules/eks"
 
   cluster_name = "prod-eks"
-
-  vpc_id              = module.vpc.vpc_id
-  private_subnet_ids  = module.vpc.private_subnets
+  vpc_id       = module.vpc.vpc_id
+  private_subnet_ids = module.vpc.private_subnets
 }
