@@ -6,7 +6,21 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
-      - run: echo "lint"
-      - run: echo "test"
+
+      - name: Lint
+        run: echo "linting"
+
+      - name: Test
+        run: echo "tests"
+
+      - name: Build Image
+        run: docker build -t app:${{ github.sha }} .
+
+      - name: Trivy Scan
+        run: echo "scan"
+
+      - name: Push to ECR
+        run: echo "push"
