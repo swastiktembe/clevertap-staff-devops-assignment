@@ -14,7 +14,6 @@
 ---
 
 ## Long Term
-- Move workloads to Graviton → 10%
 - Reduce cross-region traffic → 5%
 
 ---
