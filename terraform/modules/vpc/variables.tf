@@ -1,0 +1,11 @@
+cat > terraform/modules/vpc/variables.tf << 'EOF'
+variable "name" {}
+variable "cidr" {}
+variable "azs" { type = list(string) }
+
+variable "public_subnets" { type = list(string) }
+variable "private_subnets" { type = list(string) }
+variable "intra_subnets" { type = list(string) }
+
+variable "s3_bucket_arn" {}
+EOF
